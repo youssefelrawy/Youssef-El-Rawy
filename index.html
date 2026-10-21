@@ -874,20 +874,46 @@
     }
 
     .redecor-commercial {
+      position: relative;
+      isolation: isolate;
       display: grid;
       grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
       gap: clamp(28px, 5vw, 65px);
       align-items: center;
       padding: clamp(32px, 5.5vw, 68px);
-      color: #3b342e;
+      color: #f5f1ee;
       background:
-        repeating-linear-gradient(90deg, transparent 0, transparent 112px, rgba(164, 117, 81, 0.075) 113px, transparent 114px),
-        linear-gradient(130deg, #f5f1e7, #e8e0d2);
+        radial-gradient(circle at 83% 29%, rgba(137, 18, 57, 0.32), transparent 27rem),
+        linear-gradient(120deg, transparent 0 67%, rgba(157, 26, 70, 0.12) 67% 68%, transparent 68%),
+        repeating-linear-gradient(90deg, transparent 0 95px, rgba(255, 255, 255, 0.035) 95px 96px),
+        linear-gradient(135deg, #171a1b 0%, #292729 52%, #17191a 100%);
+      border-block: 1px solid rgba(199, 41, 92, 0.42);
+    }
+
+    .redecor-commercial::before {
+      position: absolute;
+      inset: 0 auto 0 0;
+      z-index: -1;
+      width: 6px;
+      content: "";
+      background: linear-gradient(#c6265b, #7f163d 72%, #d5ec42);
+    }
+
+    .redecor-commercial::after {
+      position: absolute;
+      right: -86px;
+      bottom: -120px;
+      z-index: -1;
+      width: 310px;
+      aspect-ratio: 1;
+      content: "";
+      border: 1px solid rgba(221, 78, 122, 0.13);
+      border-radius: 50%;
     }
 
     .redecor-eyebrow {
       display: block;
-      color: #9a633f;
+      color: #d97898;
       font-size: 0.72rem;
       font-weight: 850;
       letter-spacing: 0.14em;
@@ -897,7 +923,7 @@
     .redecor-commercial h4 {
       max-width: 460px;
       margin: 16px 0 20px;
-      color: #393731;
+      color: #fff7f6;
       font-size: clamp(2rem, 3.9vw, 4rem);
       letter-spacing: -0.04em;
       line-height: 1.06;
@@ -906,13 +932,14 @@
     .redecor-commercial p {
       max-width: 440px;
       margin-bottom: 0;
-      color: #655e55;
+      color: #cdc3c7;
     }
 
     .redecor-wordmark {
       width: 160px;
       height: auto;
       margin-bottom: 35px;
+      filter: brightness(0) saturate(100%) invert(30%) sepia(58%) saturate(2056%) hue-rotate(304deg) brightness(95%) contrast(96%);
     }
 
     .redecor-film-frame {
@@ -921,10 +948,10 @@
       max-width: 360px;
       margin-inline: auto;
       overflow: hidden;
-      border: 10px solid #343936;
-      border-radius: 23px;
-      background: #292b29;
-      box-shadow: 25px 27px 0 rgba(164, 117, 81, 0.24), 0 27px 55px rgba(45, 35, 24, 0.25);
+      border: 7px solid #090a0b;
+      border-radius: 34px 10px 34px 10px;
+      background: #111213;
+      box-shadow: 19px 19px 0 rgba(148, 22, 63, 0.31), 0 30px 80px rgba(0, 0, 0, 0.5);
     }
 
     .redecor-film-frame video {
@@ -932,7 +959,7 @@
       max-height: 650px;
       aspect-ratio: 9 / 16;
       object-fit: contain;
-      background: #171918;
+      background: #101112;
     }
 
     .redecor-results {
@@ -965,6 +992,82 @@
       margin: 0;
       color: #bac0b6;
       font-size: 0.9rem;
+    }
+
+    .redecor-period-shift {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      align-items: stretch;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .redecor-period {
+      padding: 21px 25px;
+      border: 1px solid rgba(163, 184, 196, 0.24);
+      border-radius: 16px;
+      background: linear-gradient(130deg, #2b3940, #202b30);
+    }
+
+    .redecor-period--after {
+      border-color: rgba(233, 104, 147, 0.5);
+      background: linear-gradient(130deg, #613148, #3d2233);
+    }
+
+    .redecor-period span,
+    .redecor-period small {
+      display: block;
+      color: #c3d1d6;
+      font-size: 0.73rem;
+      font-weight: 750;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .redecor-period--after span,
+    .redecor-period--after small {
+      color: #f3c6d6;
+    }
+
+    .redecor-period strong {
+      display: block;
+      margin: 3px 0 7px;
+      color: #fff;
+      font-size: clamp(1.65rem, 3vw, 2.8rem);
+      letter-spacing: -0.05em;
+      line-height: 1.1;
+    }
+
+    .redecor-period-arrow {
+      display: grid;
+      place-items: center;
+      color: #e77da0;
+      font-size: 2rem;
+    }
+
+    .redecor-organic-note {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 28px;
+      padding: 13px 17px;
+      border: 1px solid rgba(208, 233, 86, 0.35);
+      border-radius: 12px;
+      color: #e8f4ad;
+      background: rgba(181, 211, 58, 0.08);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.015em;
+    }
+
+    .redecor-organic-note::before {
+      flex: 0 0 auto;
+      width: 8px;
+      height: 8px;
+      content: "";
+      border-radius: 50%;
+      background: #d4ef57;
+      box-shadow: 0 0 0 5px rgba(212, 239, 87, 0.13);
     }
 
     .redecor-stat-grid {
@@ -1025,14 +1128,16 @@
     .redecor-proof-board {
       min-width: 0;
       padding: clamp(16px, 2.5vw, 28px);
-      border: 1px solid rgba(245, 241, 231, 0.16);
+      border: 1px solid rgba(119, 189, 221, 0.46);
       border-radius: 18px;
-      background: #303632;
+      background: linear-gradient(150deg, #203441 0%, #172731 100%);
+      box-shadow: inset 0 4px 0 rgba(119, 189, 221, 0.82);
     }
 
     .redecor-proof-board--after {
-      border-color: rgba(185, 130, 91, 0.58);
-      background: #42372f;
+      border-color: rgba(231, 91, 146, 0.7);
+      background: linear-gradient(150deg, #4c243b 0%, #321b31 100%);
+      box-shadow: inset 0 4px 0 rgba(231, 91, 146, 0.9);
     }
 
     .redecor-proof-board h6 {
@@ -1046,17 +1151,26 @@
 
     .redecor-proof-board > p {
       margin: 3px 0 18px;
-      color: #d0d0c5;
+      color: #c7dbe4;
       font-size: 0.77rem;
       line-height: 1.5;
+    }
+
+    .redecor-proof-board--after > p {
+      color: #f1cbdb;
     }
 
     .redecor-proof-tile {
       margin: 0;
       padding: 12px;
-      border: 1px solid rgba(245, 241, 231, 0.14);
+      border: 1px solid rgba(178, 223, 240, 0.18);
       border-radius: 11px;
-      background: rgba(0, 0, 0, 0.15);
+      background: rgba(2, 13, 21, 0.25);
+    }
+
+    .redecor-proof-board--after .redecor-proof-tile {
+      border-color: rgba(246, 185, 211, 0.22);
+      background: rgba(26, 5, 19, 0.24);
     }
 
     .redecor-proof-tile + .redecor-proof-tile {
@@ -1080,8 +1194,12 @@
     }
 
     .redecor-proof-tile figcaption span {
-      color: #e2ba97;
+      color: #9bd8f1;
       font-weight: 800;
+    }
+
+    .redecor-proof-board--after .redecor-proof-tile figcaption span {
+      color: #ffbad5;
     }
 
     .redecor-proof-tile figcaption small {
@@ -1098,25 +1216,49 @@
       background: white;
     }
 
-    .redecor-proof-tile img {
+    .redecor-proof-slices {
+      display: grid;
+      gap: 4px;
+      padding: 5px;
+      background: #fff;
+    }
+
+    .redecor-proof-slice {
+      display: block;
       width: 100%;
-      height: auto;
-      aspect-ratio: 4 / 1;
-      object-fit: cover;
-      object-position: center 24%;
-      transition: transform 250ms ease;
+      background: #fff;
     }
 
-    .redecor-proof-tile a:hover img {
-      transform: scale(1.035);
+    .redecor-proof-slice--date {
+      height: 50px;
+      border-bottom: 1px solid #e6edf3;
     }
 
-    .redecor-proof-tile img[data-platform="meta"] {
-      object-position: center 56%;
+    .redecor-proof-metrics {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
     }
 
-    .redecor-proof-tile img[data-platform="linkedin"] {
-      object-position: center 65%;
+    .redecor-proof-slice--metric {
+      width: min(100%, 220px);
+      height: 112px;
+    }
+
+    .redecor-proof-metrics--pair .redecor-proof-slice--metric {
+      width: min(50%, 220px);
+    }
+
+    .redecor-proof-tile a:hover,
+    .redecor-proof-tile a:focus-visible {
+      border-color: #fff;
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.28);
+    }
+
+    @media (max-width: 460px) {
+      .redecor-proof-slice--date { height: 42px; }
+      .redecor-proof-slice--metric { height: 90px; }
     }
 
     .redecor-method {
@@ -1363,6 +1505,106 @@
       max-width: 410px;
       margin-bottom: 5px;
       color: var(--muted);
+    }
+
+    .reel-feature {
+      display: grid;
+      grid-template-columns: minmax(180px, 250px) minmax(0, 1fr);
+      gap: clamp(20px, 4vw, 48px);
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 16px;
+      border: 1px solid rgba(209, 155, 94, 0.39);
+      border-radius: 22px;
+      background:
+        radial-gradient(circle at 0 0, rgba(191, 95, 48, 0.19), transparent 24rem),
+        linear-gradient(120deg, #2c201b, #171816 75%);
+    }
+
+    .reel-feature-cover {
+      display: block;
+      overflow: hidden;
+      border: 1px solid rgba(238, 195, 139, 0.31);
+      border-radius: 14px;
+      aspect-ratio: 3 / 4;
+      background: #241911;
+    }
+
+    .reel-feature-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 500ms ease;
+    }
+
+    .reel-feature-cover:hover img {
+      transform: scale(1.035);
+    }
+
+    .reel-feature-copy {
+      padding: 12px 16px 12px 0;
+    }
+
+    .reel-feature-kicker {
+      color: #edbd82;
+      font-size: 0.7rem;
+      font-weight: 850;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .reel-feature-copy h4 {
+      max-width: 620px;
+      margin: 10px 0 11px;
+      color: #fff5e9;
+      font-size: clamp(1.4rem, 2.7vw, 2.45rem);
+      letter-spacing: -0.04em;
+      line-height: 1.15;
+    }
+
+    .reel-feature-copy p {
+      max-width: 630px;
+      margin: 0 0 17px;
+      color: #d1c3b6;
+      font-size: 0.86rem;
+    }
+
+    .reel-feature-stat {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 19px;
+      color: #efdcc6;
+      font-size: 0.78rem;
+    }
+
+    .reel-feature-stat strong {
+      color: #fff5e9;
+      font-size: 1.55rem;
+      letter-spacing: -0.04em;
+    }
+
+    .reel-feature-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .reel-feature-links a {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 13px;
+      border: 1px solid rgba(236, 182, 118, 0.48);
+      border-radius: 999px;
+      color: #ffe8ce;
+      font-size: 0.75rem;
+      font-weight: 800;
+      transition: background 180ms ease, transform 180ms ease;
+    }
+
+    .reel-feature-links a:hover {
+      transform: translateY(-2px);
+      background: rgba(236, 182, 118, 0.14);
     }
 
     .reel-grid {
@@ -2120,7 +2362,16 @@
 
       .redecor-film-frame {
         border-width: 7px;
-        box-shadow: 12px 14px 0 rgba(164, 117, 81, 0.24);
+        box-shadow: 10px 13px 0 rgba(148, 22, 63, 0.31);
+      }
+
+      .redecor-period-shift {
+        grid-template-columns: 1fr;
+      }
+
+      .redecor-period-arrow {
+        line-height: 0.8;
+        transform: rotate(90deg);
       }
 
       .redecor-gallery,
@@ -2183,6 +2434,20 @@
         display: grid;
         grid-template-columns: 104px minmax(0, 1fr);
         gap: 16px;
+      }
+
+      .reel-feature {
+        grid-template-columns: 105px minmax(0, 1fr);
+        gap: 16px;
+        padding: 11px;
+      }
+
+      .reel-feature-copy {
+        padding: 4px 2px 4px 0;
+      }
+
+      .reel-feature-stat {
+        margin-bottom: 12px;
       }
 
       .reel-meta {
@@ -2361,12 +2626,12 @@
           <span class="proof-label">Edutainment Videos</span>
         </div>
         <div class="proof-item" data-reveal>
-          <strong class="proof-value" aria-label="More than 1.5 million views"><span aria-hidden="true" data-count-up data-count-to="1.5" data-count-decimals="1" data-count-suffix="M+">1.5M+</span></strong>
+          <strong class="proof-value" aria-label="More than 2 million views"><span aria-hidden="true" data-count-up data-count-to="2" data-count-suffix="M+">2M+</span></strong>
           <span class="proof-label">Personal Content Views</span>
         </div>
         <div class="proof-item" data-reveal>
-          <strong class="proof-value" aria-label="More than 50 thousand likes"><span aria-hidden="true" data-count-up data-count-to="50" data-count-suffix="K+">50K+</span></strong>
-          <span class="proof-label">Personal Content Likes</span>
+          <strong class="proof-value" aria-label="More than 40 thousand publicly verifiable likes"><span aria-hidden="true" data-count-up data-count-to="40" data-count-suffix="K+">40K+</span></strong>
+          <span class="proof-label">Verified Personal Content Likes</span>
         </div>
       </div>
     </section>
@@ -2424,7 +2689,7 @@
               <p>A Redecor &amp; More brand film presented alongside the production work and measured channel results from the same role.</p>
             </div>
             <div class="redecor-film-frame">
-              <video controls playsinline preload="metadata" poster="assets/images/redecor-commercial-poster.webp" aria-label="Redecor and More company commercial">
+              <video controls playsinline preload="metadata" poster="assets/images/redecor-commercial-cover.webp" aria-label="Redecor and More company commercial">
                 <source src="assets/media/redecor-commercial-web.mp4" type="video/mp4">
                 Your browser does not support embedded video.
               </video>
@@ -2435,10 +2700,17 @@
             <header class="redecor-results-head">
               <div>
                 <span class="redecor-eyebrow">02 / Measured impact</span>
-                <h4 id="redecor-results-title">A visible shift after August.</h4>
+                <h4 id="redecor-results-title">One month of views exceeded the previous three.</h4>
               </div>
-              <p>From a three-month baseline before I joined to the first measured month and subsequent results.</p>
+              <p>The first measured month after I joined is compared with the entire three months before it—not one month against another.</p>
             </header>
+
+            <div class="redecor-period-shift" aria-label="Three months before joining compared with the first month after joining">
+              <div class="redecor-period"><span>Before joining · May–Aug 2026</span><strong>3 months</strong><small>Baseline across the prior reporting window</small></div>
+              <span class="redecor-period-arrow" aria-hidden="true">→</span>
+              <div class="redecor-period redecor-period--after"><span>After joining · Aug–Sep 2026</span><strong>1 month</strong><small>The very first measured window</small></div>
+            </div>
+            <p class="redecor-organic-note">100% organic results across the Redecor channels shown here · no paid ads</p>
 
             <div class="redecor-stat-grid" aria-label="Redecor and More performance summary">
               <div class="redecor-stat"><strong>≈31K</strong><span>Meta + TikTok views in the first month</span><small>Versus ≈24K across the preceding three months</small></div>
@@ -2454,15 +2726,15 @@
                 <p>May–Aug 2026 · approximately three months</p>
                 <figure class="redecor-proof-tile">
                   <figcaption><strong>TikTok</strong><span>178 video views</span><small>May 20–Aug 20, 2026</small></figcaption>
-                  <a href="assets/images/redecor-before-tiktok.png" target="_blank" rel="noopener" aria-label="Open full TikTok analytics screenshot before joining"><img src="assets/images/redecor-before-tiktok.png" alt="TikTok Studio May 20 to Aug 20: 178 video views" loading="lazy" width="1553" height="886" data-platform="tiktok"></a>
+                  <a href="assets/images/redecor-before-tiktok.png" target="_blank" rel="noopener" aria-label="Open full TikTok analytics screenshot before joining: May 20 to Aug 20, 178 video views"><span class="redecor-proof-slices"><svg class="redecor-proof-slice redecor-proof-slice--date" viewBox="967 14 315 48" preserveAspectRatio="xMaxYMid meet" aria-hidden="true" focusable="false"><image href="assets/images/redecor-before-tiktok.png" width="1553" height="886"/></svg><span class="redecor-proof-metrics"><svg class="redecor-proof-slice redecor-proof-slice--metric" viewBox="43 122 255 150" aria-hidden="true" focusable="false"><image href="assets/images/redecor-before-tiktok.png" width="1553" height="886"/></svg></span></span></a>
                 </figure>
                 <figure class="redecor-proof-tile">
                   <figcaption><strong>Meta · Instagram + Facebook views</strong><span>23.7K views · 2.7K IG reach</span><small>May 20–Aug 20, 2026</small></figcaption>
-                  <a href="assets/images/redecor-before-meta.png" target="_blank" rel="noopener" aria-label="Open full Meta analytics screenshot before joining"><img src="assets/images/redecor-before-meta.png" alt="Meta May 20 to Aug 20: 23.7K combined views and 2.7K Instagram reach" loading="lazy" width="1863" height="885" data-platform="meta"></a>
+                  <a href="assets/images/redecor-before-meta.png" target="_blank" rel="noopener" aria-label="Open full Meta analytics screenshot before joining: May 20 to Aug 20, 23.7K views, 2.7K Instagram reach"><span class="redecor-proof-slices"><svg class="redecor-proof-slice redecor-proof-slice--date" viewBox="1335 19 430 69" preserveAspectRatio="xMaxYMid meet" aria-hidden="true" focusable="false"><image href="assets/images/redecor-before-meta.png" width="1863" height="885"/></svg><span class="redecor-proof-metrics redecor-proof-metrics--pair"><svg class="redecor-proof-slice redecor-proof-slice--metric" viewBox="240 330 515 205" aria-hidden="true" focusable="false"><image href="assets/images/redecor-before-meta.png" width="1863" height="885"/></svg><svg class="redecor-proof-slice redecor-proof-slice--metric" viewBox="1033 330 470 205" aria-hidden="true" focusable="false"><image href="assets/images/redecor-before-meta.png" width="1863" height="885"/></svg></span></span></a>
                 </figure>
                 <figure class="redecor-proof-tile">
                   <figcaption><strong>LinkedIn</strong><span>10,341 impressions</span><small>May 20–Aug 19, 2026</small></figcaption>
-                  <a href="assets/images/redecor-before-linkedin.png" target="_blank" rel="noopener" aria-label="Open full LinkedIn analytics screenshot before joining"><img src="assets/images/redecor-before-linkedin.png" alt="LinkedIn May 20 to Aug 19: 10,341 impressions" loading="lazy" width="1822" height="631" data-platform="linkedin"></a>
+                  <a href="assets/images/redecor-before-linkedin.png" target="_blank" rel="noopener" aria-label="Open full LinkedIn analytics screenshot before joining: May 20 to Aug 19, 10,341 impressions"><span class="redecor-proof-slices"><svg class="redecor-proof-slice redecor-proof-slice--date" viewBox="505 214 490 76" preserveAspectRatio="xMinYMid meet" aria-hidden="true" focusable="false"><image href="assets/images/redecor-before-linkedin.png" width="1822" height="631"/></svg><span class="redecor-proof-metrics"><svg class="redecor-proof-slice redecor-proof-slice--metric" viewBox="510 340 300 220" aria-hidden="true" focusable="false"><image href="assets/images/redecor-before-linkedin.png" width="1822" height="631"/></svg></span></span></a>
                 </figure>
               </div>
               <div class="redecor-proof-board redecor-proof-board--after" aria-label="First month after joining: three platform screenshots">
@@ -2470,15 +2742,15 @@
                 <p>Aug–Sep 2026 · first measured period</p>
                 <figure class="redecor-proof-tile">
                   <figcaption><strong>TikTok</strong><span>≈5.4K video views</span><small>Aug 20–Sep 20, 2026</small></figcaption>
-                  <a href="assets/images/redecor-after-tiktok.png" target="_blank" rel="noopener" aria-label="Open full TikTok analytics screenshot after joining"><img src="assets/images/redecor-after-tiktok.png" alt="TikTok Studio Aug 20 to Sep 20: about 5.4K video views" loading="lazy" width="1520" height="880" data-platform="tiktok"></a>
+                  <a href="assets/images/redecor-after-tiktok.png" target="_blank" rel="noopener" aria-label="Open full TikTok analytics screenshot after joining: Aug 20 to Sep 20, about 5.4K video views"><span class="redecor-proof-slices"><svg class="redecor-proof-slice redecor-proof-slice--date" viewBox="940 12 310 49" preserveAspectRatio="xMaxYMid meet" aria-hidden="true" focusable="false"><image href="assets/images/redecor-after-tiktok.png" width="1520" height="880"/></svg><span class="redecor-proof-metrics"><svg class="redecor-proof-slice redecor-proof-slice--metric" viewBox="12 113 252 152" aria-hidden="true" focusable="false"><image href="assets/images/redecor-after-tiktok.png" width="1520" height="880"/></svg></span></span></a>
                 </figure>
                 <figure class="redecor-proof-tile">
                   <figcaption><strong>Meta · Instagram + Facebook views</strong><span>25.9K views · 5.9K IG reach</span><small>Aug 20–Sep 21, 2026</small></figcaption>
-                  <a href="assets/images/redecor-after-meta.png" target="_blank" rel="noopener" aria-label="Open full Meta analytics screenshot after joining"><img src="assets/images/redecor-after-meta.png" alt="Meta Aug 20 to Sep 21: 25.9K combined views and 5.9K Instagram reach" loading="lazy" width="1855" height="883" data-platform="meta"></a>
+                  <a href="assets/images/redecor-after-meta.png" target="_blank" rel="noopener" aria-label="Open full Meta analytics screenshot after joining: Aug 20 to Sep 21, 25.9K views, 5.9K Instagram reach"><span class="redecor-proof-slices"><svg class="redecor-proof-slice redecor-proof-slice--date" viewBox="1335 19 430 69" preserveAspectRatio="xMaxYMid meet" aria-hidden="true" focusable="false"><image href="assets/images/redecor-after-meta.png" width="1855" height="883"/></svg><span class="redecor-proof-metrics redecor-proof-metrics--pair"><svg class="redecor-proof-slice redecor-proof-slice--metric" viewBox="238 328 515 205" aria-hidden="true" focusable="false"><image href="assets/images/redecor-after-meta.png" width="1855" height="883"/></svg><svg class="redecor-proof-slice redecor-proof-slice--metric" viewBox="1030 328 470 205" aria-hidden="true" focusable="false"><image href="assets/images/redecor-after-meta.png" width="1855" height="883"/></svg></span></span></a>
                 </figure>
                 <figure class="redecor-proof-tile">
                   <figcaption><strong>LinkedIn</strong><span>8,660 impressions</span><small>Aug 20–Sep 19, 2026</small></figcaption>
-                  <a href="assets/images/redecor-after-linkedin.png" target="_blank" rel="noopener" aria-label="Open full LinkedIn analytics screenshot after joining"><img src="assets/images/redecor-after-linkedin.png" alt="LinkedIn Aug 20 to Sep 19: 8,660 impressions" loading="lazy" width="1744" height="616" data-platform="linkedin"></a>
+                  <a href="assets/images/redecor-after-linkedin.png" target="_blank" rel="noopener" aria-label="Open full LinkedIn analytics screenshot after joining: Aug 20 to Sep 19, 8,660 impressions"><span class="redecor-proof-slices"><svg class="redecor-proof-slice redecor-proof-slice--date" viewBox="420 198 490 85" preserveAspectRatio="xMinYMid meet" aria-hidden="true" focusable="false"><image href="assets/images/redecor-after-linkedin.png" width="1744" height="616"/></svg><span class="redecor-proof-metrics"><svg class="redecor-proof-slice redecor-proof-slice--metric" viewBox="425 320 300 235" aria-hidden="true" focusable="false"><image href="assets/images/redecor-after-linkedin.png" width="1744" height="616"/></svg></span></span></a>
                 </figure>
               </div>
             </div>
@@ -2567,8 +2839,24 @@
               <span class="role-chip">Personal Creator Work</span>
               <h3 id="reels-title">Latest Reels</h3>
             </div>
-            <p>Recent edutainment, storytelling, and behind-the-scenes work. Each piece opens directly on Instagram.</p>
+            <p>Recent edutainment, storytelling, and behind-the-scenes work. Open each piece on its published Instagram or TikTok post.</p>
           </header>
+
+          <article class="reel-feature" aria-labelledby="bassem-amin-title">
+            <a class="reel-feature-cover" href="https://www.tiktok.com/@elraawy1/video/7695093224787938568" target="_blank" rel="noopener" aria-label="Watch the Bassem Amin storytelling video on TikTok">
+              <img src="assets/images/reel-bassem-amin-cover.webp" alt="Arabic cover artwork for Bassem Amin's chess story, featuring Youssef El Rawy" loading="lazy" width="1006" height="1342">
+            </a>
+            <div class="reel-feature-copy">
+              <span class="reel-feature-kicker">Featured storytelling video</span>
+              <h4 id="bassem-amin-title">Bassem Amin · A chess story worth telling</h4>
+              <p>On-camera storytelling about the Egyptian chess champion, built with a collaborative script and a strong visual hook.</p>
+              <span class="reel-feature-stat"><strong>≈175K</strong> combined views across platforms · creator estimate</span>
+              <div class="reel-feature-links">
+                <a href="https://www.tiktok.com/@elraawy1/video/7695093224787938568" target="_blank" rel="noopener">Watch on TikTok</a>
+                <a href="https://www.instagram.com/elraawy1/reel/DeUoAXmvYVv/" target="_blank" rel="noopener">Watch on Instagram</a>
+              </div>
+            </div>
+          </article>
 
           <div class="reel-grid">
             <article class="reel-card">
