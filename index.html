@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0c0f0d">
-  <meta name="description" content="Youssef El Rawy is a Cairo-based content creator and end-to-end social media marketer whose work has generated 7M+ combined views and 475K+ likes.">
+  <meta name="description" content="Youssef El Rawy is a Cairo-based content creator and social media marketer whose work has generated 8M+ combined views and about 500K likes.">
   <meta property="og:title" content="Youssef El Rawy — Content Creator & Social Media Marketer">
-  <meta property="og:description" content="Selected social media, short-form content, and commercial work generating 7M+ combined views and 475K+ likes.">
+  <meta property="og:description" content="Selected social media, short-form content, and commercial work generating 8M+ combined views and about 500K likes.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://youssefelrawy.github.io/Youssef-El-Rawy/">
   <meta property="og:image" content="https://youssefelrawy.github.io/Youssef-El-Rawy/assets/images/youssef-el-rawy-share-v2.png">
@@ -17,7 +17,7 @@
   <meta property="og:image:alt" content="Youssef El Rawy — Content Creator and Social Media Marketer">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Youssef El Rawy — Content Creator & Social Media Marketer">
-  <meta name="twitter:description" content="Selected social media, short-form content, and commercial work generating 7M+ combined views and 475K+ likes.">
+  <meta name="twitter:description" content="Selected social media, short-form content, and commercial work generating 8M+ combined views and about 500K likes.">
   <meta name="twitter:image" content="https://youssefelrawy.github.io/Youssef-El-Rawy/assets/images/youssef-el-rawy-share-v2.png">
   <meta name="twitter:image:alt" content="Youssef El Rawy — Content Creator and Social Media Marketer">
   <link rel="canonical" href="https://youssefelrawy.github.io/Youssef-El-Rawy/">
@@ -124,6 +124,7 @@
     }
 
     .nav-inner {
+      position: relative;
       min-height: 76px;
       display: flex;
       align-items: center;
@@ -166,6 +167,55 @@
 
     .nav-links a:hover {
       color: var(--ink);
+    }
+
+    .mobile-nav {
+      display: none;
+    }
+
+    .mobile-nav summary {
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      padding: 9px 15px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      color: var(--ink);
+      font-size: 0.82rem;
+      font-weight: 800;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .mobile-nav summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .mobile-nav nav {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      display: grid;
+      gap: 4px;
+      min-width: min(270px, calc(100vw - 28px));
+      padding: 10px;
+      border: 1px solid var(--line-strong);
+      border-radius: 16px;
+      background: #1a211b;
+      box-shadow: var(--shadow);
+    }
+
+    .mobile-nav nav a {
+      padding: 11px 12px;
+      border-radius: 9px;
+      color: var(--ink);
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
+    .mobile-nav nav a:hover,
+    .mobile-nav nav a:focus-visible {
+      background: rgba(255, 255, 255, 0.08);
     }
 
     .nav-cta {
@@ -400,9 +450,12 @@
         linear-gradient(145deg, rgba(216, 185, 106, 0.13), rgba(255, 255, 255, 0.025)),
         rgba(23, 28, 24, 0.94);
       box-shadow: 0 20px 54px rgba(0, 0, 0, 0.24);
+      transition: opacity 560ms ease 120ms, transform 560ms ease 120ms, border-color 180ms ease;
+    }
+
+    html.motion-ready .hero-impact {
       opacity: 0;
       transform: translateY(14px);
-      transition: opacity 560ms ease 120ms, transform 560ms ease 120ms, border-color 180ms ease;
     }
 
     .hero-visual.is-visible .hero-impact {
@@ -476,6 +529,19 @@
       letter-spacing: 0.09em;
       line-height: 1.35;
       text-transform: uppercase;
+    }
+
+    .hero-followers {
+      margin: 14px 0 0;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.72rem;
+      line-height: 1.45;
+    }
+
+    .hero-followers strong {
+      color: var(--gold-pale);
     }
 
     [data-count-up] {
@@ -597,6 +663,11 @@
     }
 
     .redecor-case {
+      background: #202220;
+      border-color: rgba(164, 117, 81, 0.42);
+    }
+
+    .redecor-top {
       display: grid;
       grid-template-columns: 0.91fr 1.09fr;
       min-height: 720px;
@@ -777,6 +848,284 @@
       transform: scale(1.035);
     }
 
+    .redecor-case .case-kicker::before {
+      background: #b9825b;
+      box-shadow: 0 0 0 5px rgba(185, 130, 91, 0.13);
+    }
+
+    .redecor-case .page-link {
+      color: #f5e8d9;
+      border-color: rgba(185, 130, 91, 0.5);
+      background: rgba(164, 117, 81, 0.12);
+    }
+
+    .redecor-copy {
+      background:
+        radial-gradient(circle at 0 0, rgba(164, 117, 81, 0.25), transparent 31rem),
+        #242522;
+    }
+
+    .redecor-copy h3 {
+      color: #f5f0e4;
+    }
+
+    .redecor-copy .result-value {
+      color: #e7b88e;
+    }
+
+    .redecor-commercial {
+      display: grid;
+      grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+      gap: clamp(28px, 5vw, 65px);
+      align-items: center;
+      padding: clamp(32px, 5.5vw, 68px);
+      color: #3b342e;
+      background:
+        repeating-linear-gradient(90deg, transparent 0, transparent 112px, rgba(164, 117, 81, 0.075) 113px, transparent 114px),
+        linear-gradient(130deg, #f5f1e7, #e8e0d2);
+    }
+
+    .redecor-eyebrow {
+      display: block;
+      color: #9a633f;
+      font-size: 0.72rem;
+      font-weight: 850;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .redecor-commercial h4 {
+      max-width: 460px;
+      margin: 16px 0 20px;
+      color: #393731;
+      font-size: clamp(2rem, 3.9vw, 4rem);
+      letter-spacing: -0.04em;
+      line-height: 1.06;
+    }
+
+    .redecor-commercial p {
+      max-width: 440px;
+      margin-bottom: 0;
+      color: #655e55;
+    }
+
+    .redecor-wordmark {
+      width: 160px;
+      height: auto;
+      margin-bottom: 35px;
+    }
+
+    .redecor-film-frame {
+      position: relative;
+      width: 100%;
+      max-width: 360px;
+      margin-inline: auto;
+      overflow: hidden;
+      border: 10px solid #343936;
+      border-radius: 23px;
+      background: #292b29;
+      box-shadow: 25px 27px 0 rgba(164, 117, 81, 0.24), 0 27px 55px rgba(45, 35, 24, 0.25);
+    }
+
+    .redecor-film-frame video {
+      width: 100%;
+      max-height: 650px;
+      aspect-ratio: 9 / 16;
+      object-fit: contain;
+      background: #171918;
+    }
+
+    .redecor-results {
+      padding: clamp(32px, 5.5vw, 68px);
+      border-top: 1px solid rgba(245, 241, 231, 0.13);
+      background:
+        radial-gradient(circle at 100% 0, rgba(138, 154, 91, 0.12), transparent 30rem),
+        #242924;
+    }
+
+    .redecor-results-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 28px;
+      margin-bottom: 28px;
+    }
+
+    .redecor-results-head h4 {
+      max-width: 650px;
+      margin: 12px 0 0;
+      color: #f2eee2;
+      font-size: clamp(1.8rem, 3.3vw, 3.2rem);
+      letter-spacing: -0.035em;
+      line-height: 1.15;
+    }
+
+    .redecor-results-head p {
+      max-width: 350px;
+      margin: 0;
+      color: #bac0b6;
+      font-size: 0.9rem;
+    }
+
+    .redecor-stat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+
+    .redecor-stat {
+      min-height: 170px;
+      padding: 22px;
+      border: 1px solid rgba(245, 241, 231, 0.14);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    .redecor-stat strong {
+      display: block;
+      color: #e8b88e;
+      font-size: clamp(2.1rem, 3.4vw, 3.7rem);
+      letter-spacing: -0.055em;
+      line-height: 1.1;
+    }
+
+    .redecor-stat span {
+      display: block;
+      margin-top: 12px;
+      color: #e0e3d9;
+      font-size: 0.78rem;
+      font-weight: 800;
+      line-height: 1.5;
+      text-transform: uppercase;
+      letter-spacing: 0.055em;
+    }
+
+    .redecor-stat small {
+      display: block;
+      margin-top: 7px;
+      color: #b2b9ae;
+      font-size: 0.7rem;
+      line-height: 1.5;
+    }
+
+    .redecor-proof-heading {
+      margin: 0 0 18px;
+      color: #f2eee2;
+      font-size: 1.3rem;
+      letter-spacing: -0.02em;
+    }
+
+    .redecor-proof-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .redecor-proof-board {
+      min-width: 0;
+      padding: clamp(16px, 2.5vw, 28px);
+      border: 1px solid rgba(245, 241, 231, 0.16);
+      border-radius: 18px;
+      background: #303632;
+    }
+
+    .redecor-proof-board--after {
+      border-color: rgba(185, 130, 91, 0.58);
+      background: #42372f;
+    }
+
+    .redecor-proof-board h6 {
+      margin: 0;
+      color: #f4f0e5;
+      font-size: 0.9rem;
+      font-weight: 850;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .redecor-proof-board > p {
+      margin: 3px 0 18px;
+      color: #d0d0c5;
+      font-size: 0.77rem;
+      line-height: 1.5;
+    }
+
+    .redecor-proof-tile {
+      margin: 0;
+      padding: 12px;
+      border: 1px solid rgba(245, 241, 231, 0.14);
+      border-radius: 11px;
+      background: rgba(0, 0, 0, 0.15);
+    }
+
+    .redecor-proof-tile + .redecor-proof-tile {
+      margin-top: 10px;
+    }
+
+    .redecor-proof-tile figcaption {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 5px 14px;
+      margin-bottom: 10px;
+      color: #f5f0e4;
+      font-size: 0.76rem;
+      line-height: 1.4;
+    }
+
+    .redecor-proof-tile figcaption strong {
+      font-size: 0.83rem;
+    }
+
+    .redecor-proof-tile figcaption span {
+      color: #e2ba97;
+      font-weight: 800;
+    }
+
+    .redecor-proof-tile figcaption small {
+      flex-basis: 100%;
+      color: #b8beb4;
+      font-size: 0.68rem;
+    }
+
+    .redecor-proof-tile a {
+      display: block;
+      overflow: hidden;
+      border: 1px solid rgba(245, 241, 231, 0.2);
+      border-radius: 6px;
+      background: white;
+    }
+
+    .redecor-proof-tile img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 1;
+      object-fit: cover;
+      object-position: center 24%;
+      transition: transform 250ms ease;
+    }
+
+    .redecor-proof-tile a:hover img {
+      transform: scale(1.035);
+    }
+
+    .redecor-proof-tile img[data-platform="meta"] {
+      object-position: center 56%;
+    }
+
+    .redecor-proof-tile img[data-platform="linkedin"] {
+      object-position: center 65%;
+    }
+
+    .redecor-method {
+      margin: 22px 0 0;
+      color: #bac0b6;
+      font-size: 0.75rem;
+      line-height: 1.7;
+    }
+
     .maa-case {
       color: #fff7ef;
       background:
@@ -892,6 +1241,12 @@
       font-weight: 850;
       letter-spacing: 0.1em;
       text-transform: uppercase;
+    }
+
+    .video-frame .asset-label {
+      top: 14px;
+      bottom: auto;
+      pointer-events: none;
     }
 
     .maa-deliverables {
@@ -1508,9 +1863,12 @@
     }
 
     [data-reveal] {
+      transition: opacity 650ms ease, transform 650ms ease;
+    }
+
+    html.motion-ready [data-reveal]:not(.is-visible) {
       opacity: 0;
       transform: translateY(20px);
-      transition: opacity 650ms ease, transform 650ms ease;
     }
 
     [data-reveal].is-visible {
@@ -1527,9 +1885,17 @@
         right: -6px;
       }
 
-      .redecor-case,
+      .redecor-top,
       .twentyfive {
         grid-template-columns: 1fr;
+      }
+
+      .redecor-commercial {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .redecor-stat-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       .experience-layout {
@@ -1542,7 +1908,7 @@
       }
 
       .redecor-gallery {
-        column-count: 3;
+        column-count: 2;
       }
 
       .video-card {
@@ -1559,8 +1925,12 @@
         width: min(calc(100% - 28px), var(--max));
       }
 
-      .nav-links a:not(.nav-cta) {
+      .nav-links {
         display: none;
+      }
+
+      .mobile-nav {
+        display: block;
       }
 
       .hero {
@@ -1608,6 +1978,19 @@
       .split-case,
       .experience-layout {
         grid-template-columns: 1fr;
+      }
+
+      .redecor-commercial,
+      .redecor-proof-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .redecor-results-head {
+        display: block;
+      }
+
+      .redecor-results-head p {
+        margin-top: 15px;
       }
 
       .key-visual {
@@ -1722,10 +2105,47 @@
         padding: 28px;
       }
 
+      .redecor-commercial,
+      .redecor-results {
+        padding: 28px;
+      }
+
+      .redecor-stat-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .redecor-stat {
+        min-height: 0;
+      }
+
+      .redecor-film-frame {
+        border-width: 7px;
+        box-shadow: 12px 14px 0 rgba(164, 117, 81, 0.24);
+      }
+
       .redecor-gallery,
       .twentyfive-gallery {
         height: auto;
-        column-count: 1;
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin;
+        column-count: unset;
+      }
+
+      .redecor-gallery figure,
+      .twentyfive-gallery figure {
+        flex: 0 0 min(76vw, 290px);
+        aspect-ratio: 3 / 4;
+        margin: 0;
+        scroll-snap-align: start;
+      }
+
+      .redecor-gallery img,
+      .twentyfive-gallery img {
+        height: 100%;
+        object-fit: cover;
       }
 
       .maa-roles {
@@ -1877,6 +2297,15 @@
           <span>WhatsApp</span><span class="nav-cta-number"> · +20 10 1177 7413</span>
         </a>
       </nav>
+      <details class="mobile-nav">
+        <summary>Menu</summary>
+        <nav aria-label="Mobile navigation">
+          <a href="#work">Selected Work</a>
+          <a href="#reels">Latest Reels</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </details>
     </div>
   </header>
 
@@ -1907,18 +2336,19 @@
             </figure>
             <div class="hero-stamp">From idea<br>to impact.</div>
           </div>
-          <aside class="hero-impact" aria-label="Combined content impact: more than 7 million views and more than 475 thousand likes">
+          <aside class="hero-impact" aria-label="Combined content impact: more than 8 million views and about 500 thousand likes">
             <span class="hero-impact-label">Combined Content Impact</span>
             <div class="hero-impact-grid">
               <div class="hero-impact-metric">
-                <strong aria-label="More than 7 million views"><span aria-hidden="true" data-count-up data-count-to="7" data-count-suffix="M+">7M+</span></strong>
+                <strong aria-label="More than 8 million views"><span aria-hidden="true" data-count-up data-count-to="8" data-count-suffix="M+">8M+</span></strong>
                 <span>Total Views</span>
               </div>
               <div class="hero-impact-metric">
-                <strong aria-label="More than 475 thousand likes"><span aria-hidden="true" data-count-up data-count-to="475" data-count-suffix="K+">475K+</span></strong>
+                <strong aria-label="About 500 thousand likes"><span aria-hidden="true">≈</span><span aria-hidden="true" data-count-up data-count-to="500" data-count-suffix="K">500K</span></strong>
                 <span>Total Likes</span>
               </div>
             </div>
+            <p class="hero-followers"><strong>≈30K platform follows</strong> across three linked TikTok and Instagram profiles · Oct 2026</p>
           </aside>
         </div>
       </div>
@@ -1927,16 +2357,16 @@
     <section class="proof" aria-label="Creator performance highlights">
       <div class="shell proof-grid">
         <div class="proof-item" data-reveal>
-          <strong class="proof-value" aria-label="More than 50 edutainment videos"><span aria-hidden="true" data-count-up data-count-to="50" data-count-suffix="+">50+</span></strong>
+          <strong class="proof-value" aria-label="70 edutainment videos"><span aria-hidden="true" data-count-up data-count-to="70">70</span></strong>
           <span class="proof-label">Edutainment Videos</span>
         </div>
         <div class="proof-item" data-reveal>
           <strong class="proof-value" aria-label="More than 1.5 million views"><span aria-hidden="true" data-count-up data-count-to="1.5" data-count-decimals="1" data-count-suffix="M+">1.5M+</span></strong>
-          <span class="proof-label">Total Views</span>
+          <span class="proof-label">Personal Content Views</span>
         </div>
         <div class="proof-item" data-reveal>
           <strong class="proof-value" aria-label="More than 50 thousand likes"><span aria-hidden="true" data-count-up data-count-to="50" data-count-suffix="K+">50K+</span></strong>
-          <span class="proof-label">Likes</span>
+          <span class="proof-label">Personal Content Likes</span>
         </div>
       </div>
     </section>
@@ -1950,50 +2380,110 @@
         </header>
 
         <article class="case-study redecor-case" id="redecor" data-reveal>
-          <div class="case-copy">
-            <div>
-              <span class="case-kicker">Full-time · Aug 2026 — Present</span>
-              <h3>Redecor &amp; More</h3>
-              <p class="case-summary">Owned the marketing function end to end—from strategy and research to scripting, shooting, editing, publishing, community management, and analytics.</p>
-              <div class="ownership" aria-label="Responsibilities at Redecor and More">
-                <span>Strategy</span>
-                <span>Research</span>
-                <span>Ideation</span>
-                <span>Scripting</span>
-                <span>Production</span>
-                <span>Editing</span>
-                <span>Publishing</span>
-                <span>Community</span>
-                <span>Analytics</span>
+          <div class="redecor-top">
+            <div class="case-copy redecor-copy">
+              <div>
+                <span class="case-kicker">Full-time · Aug 2026 — Present</span>
+                <h3>Redecor &amp; More</h3>
+                <p class="case-summary">Leading social content from strategy and research through scripting, production, editing, publishing, community management, and performance analysis.</p>
+                <div class="ownership" aria-label="Responsibilities at Redecor and More">
+                  <span>Strategy</span>
+                  <span>Research</span>
+                  <span>Ideation</span>
+                  <span>Scripting</span>
+                  <span>Production</span>
+                  <span>Editing</span>
+                  <span>Publishing</span>
+                  <span>Community</span>
+                  <span>Analytics</span>
+                </div>
+                <div class="card-actions" aria-label="Redecor and More pages">
+                  <a class="page-link" href="https://www.instagram.com/redecor.egy/" target="_blank" rel="noopener" aria-label="Redecor and More on Instagram"><svg class="platform-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a>
+                  <a class="page-link" href="https://www.redecorgroup.com/" target="_blank" rel="noopener" aria-label="Redecor and More website"><svg class="platform-icon" aria-hidden="true"><use href="#icon-website"></use></svg>Website</a>
+                </div>
               </div>
-              <div class="card-actions" aria-label="Redecor and More pages">
-                <a class="page-link" href="https://www.instagram.com/redecor.egy/" target="_blank" rel="noopener"><svg class="platform-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a>
-                <a class="page-link" href="https://www.redecorgroup.com/" target="_blank" rel="noopener"><svg class="platform-icon" aria-hidden="true"><use href="#icon-website"></use></svg>Website</a>
+              <div class="result-card">
+                <strong class="result-value">≈5.4K</strong>
+                <span class="result-label">TikTok video views in the first month · 178 in the preceding three months</span>
               </div>
             </div>
-            <div class="result-card">
-              <strong class="result-value" aria-label="More than 30 thousand organic cross-platform views and impressions"><span aria-hidden="true" data-count-up data-count-to="30" data-count-suffix="K+">30K+</span></strong>
-              <span class="result-label">Organic cross-platform views &amp; impressions in the first two weeks</span>
+
+            <div class="redecor-gallery" aria-label="Behind-the-scenes production at Redecor and More; scroll horizontally for more photos" tabindex="0">
+              <figure><img src="assets/images/redecor-bts-hq-1.webp" alt="On-ground content production at Redecor and More" loading="lazy" width="1800" height="2400"></figure>
+              <figure><img src="assets/images/redecor-bts-hq-3.webp" alt="Lighting and mobile production setup during a company shoot" loading="lazy" width="1800" height="2400"></figure>
+              <figure><img src="assets/images/redecor-bts-hq-4.webp" alt="Presenting Redecor and More social media and content direction" loading="lazy" width="1350" height="2400"></figure>
+              <figure><img src="assets/images/redecor-bts-hq-5.webp" alt="Redecor and More team after an on-ground production day" loading="lazy" width="1800" height="2400"></figure>
             </div>
           </div>
 
-          <div class="redecor-gallery" aria-label="Behind-the-scenes production at Redecor and More">
-            <figure>
-              <img src="assets/images/redecor-bts-hq-1.webp" alt="On-ground content production at Redecor and More" loading="lazy">
-            </figure>
-            <figure>
-              <img src="assets/images/redecor-bts-hq-2.webp" alt="Behind the scenes of an office content shoot" loading="lazy">
-            </figure>
-            <figure>
-              <img src="assets/images/redecor-bts-hq-3.webp" alt="Lighting and mobile production setup during a company shoot" loading="lazy">
-            </figure>
-            <figure>
-              <img src="assets/images/redecor-bts-hq-4.webp" alt="Presenting Redecor and More social media and content direction" loading="lazy">
-            </figure>
-            <figure>
-              <img src="assets/images/redecor-bts-hq-5.webp" alt="Redecor and More team after an on-ground production day" loading="lazy">
-            </figure>
-          </div>
+          <section class="redecor-commercial" aria-labelledby="redecor-commercial-title">
+            <div>
+              <img class="redecor-wordmark" src="assets/images/redecor-wordmark.svg" alt="Redecor and More" loading="lazy" width="1071" height="612">
+              <span class="redecor-eyebrow">01 / The commercial</span>
+              <h4 id="redecor-commercial-title">Designed for life in motion.</h4>
+              <p>A Redecor &amp; More brand film presented alongside the production work and measured channel results from the same role.</p>
+            </div>
+            <div class="redecor-film-frame">
+              <video controls playsinline preload="metadata" poster="assets/images/redecor-commercial-poster.webp" aria-label="Redecor and More company commercial">
+                <source src="assets/media/redecor-commercial-web.mp4" type="video/mp4">
+                Your browser does not support embedded video.
+              </video>
+            </div>
+          </section>
+
+          <section class="redecor-results" aria-labelledby="redecor-results-title">
+            <header class="redecor-results-head">
+              <div>
+                <span class="redecor-eyebrow">02 / Measured impact</span>
+                <h4 id="redecor-results-title">A visible shift after August.</h4>
+              </div>
+              <p>From a three-month baseline before I joined to the first measured month and subsequent results.</p>
+            </header>
+
+            <div class="redecor-stat-grid" aria-label="Redecor and More performance summary">
+              <div class="redecor-stat"><strong>≈31K</strong><span>Meta + TikTok views in the first month</span><small>Versus ≈24K across the preceding three months</small></div>
+              <div class="redecor-stat"><strong>≈52K</strong><span>Meta + TikTok views after joining</span><small>≈41K Meta + ≈11K TikTok across two measured periods</small></div>
+              <div class="redecor-stat"><strong>5.9K</strong><span>Instagram reach in the first month</span><small>Versus 2.7K in the preceding three months</small></div>
+              <div class="redecor-stat"><strong>≈17K</strong><span>LinkedIn impressions after joining</span><small>8,660 + 8,683 across two measured periods</small></div>
+            </div>
+
+            <h5 class="redecor-proof-heading">The source snapshots</h5>
+            <div class="redecor-proof-grid">
+              <div class="redecor-proof-board" aria-label="Before joining: three platform screenshots">
+                <h6>Before joining</h6>
+                <p>May–Aug 2026 · approximately three months</p>
+                <figure class="redecor-proof-tile">
+                  <figcaption><strong>TikTok</strong><span>178 video views</span><small>May 20–Aug 20, 2026</small></figcaption>
+                  <a href="assets/images/redecor-before-tiktok.png" target="_blank" rel="noopener" aria-label="Open full TikTok analytics screenshot before joining"><img src="assets/images/redecor-before-tiktok.png" alt="TikTok Studio May 20 to Aug 20: 178 video views" loading="lazy" width="1553" height="886" data-platform="tiktok"></a>
+                </figure>
+                <figure class="redecor-proof-tile">
+                  <figcaption><strong>Meta · Instagram + Facebook views</strong><span>23.7K views · 2.7K IG reach</span><small>May 20–Aug 20, 2026</small></figcaption>
+                  <a href="assets/images/redecor-before-meta.png" target="_blank" rel="noopener" aria-label="Open full Meta analytics screenshot before joining"><img src="assets/images/redecor-before-meta.png" alt="Meta May 20 to Aug 20: 23.7K combined views and 2.7K Instagram reach" loading="lazy" width="1863" height="885" data-platform="meta"></a>
+                </figure>
+                <figure class="redecor-proof-tile">
+                  <figcaption><strong>LinkedIn</strong><span>10,341 impressions</span><small>May 20–Aug 19, 2026</small></figcaption>
+                  <a href="assets/images/redecor-before-linkedin.png" target="_blank" rel="noopener" aria-label="Open full LinkedIn analytics screenshot before joining"><img src="assets/images/redecor-before-linkedin.png" alt="LinkedIn May 20 to Aug 19: 10,341 impressions" loading="lazy" width="1822" height="631" data-platform="linkedin"></a>
+                </figure>
+              </div>
+              <div class="redecor-proof-board redecor-proof-board--after" aria-label="First month after joining: three platform screenshots">
+                <h6>First month after joining</h6>
+                <p>Aug–Sep 2026 · first measured period</p>
+                <figure class="redecor-proof-tile">
+                  <figcaption><strong>TikTok</strong><span>≈5.4K video views</span><small>Aug 20–Sep 20, 2026</small></figcaption>
+                  <a href="assets/images/redecor-after-tiktok.png" target="_blank" rel="noopener" aria-label="Open full TikTok analytics screenshot after joining"><img src="assets/images/redecor-after-tiktok.png" alt="TikTok Studio Aug 20 to Sep 20: about 5.4K video views" loading="lazy" width="1520" height="880" data-platform="tiktok"></a>
+                </figure>
+                <figure class="redecor-proof-tile">
+                  <figcaption><strong>Meta · Instagram + Facebook views</strong><span>25.9K views · 5.9K IG reach</span><small>Aug 20–Sep 21, 2026</small></figcaption>
+                  <a href="assets/images/redecor-after-meta.png" target="_blank" rel="noopener" aria-label="Open full Meta analytics screenshot after joining"><img src="assets/images/redecor-after-meta.png" alt="Meta Aug 20 to Sep 21: 25.9K combined views and 5.9K Instagram reach" loading="lazy" width="1855" height="883" data-platform="meta"></a>
+                </figure>
+                <figure class="redecor-proof-tile">
+                  <figcaption><strong>LinkedIn</strong><span>8,660 impressions</span><small>Aug 20–Sep 19, 2026</small></figcaption>
+                  <a href="assets/images/redecor-after-linkedin.png" target="_blank" rel="noopener" aria-label="Open full LinkedIn analytics screenshot after joining"><img src="assets/images/redecor-after-linkedin.png" alt="LinkedIn Aug 20 to Sep 19: 8,660 impressions" loading="lazy" width="1744" height="616" data-platform="linkedin"></a>
+                </figure>
+              </div>
+            </div>
+            <p class="redecor-method">Later September–October analytics contribute to the written ≈52K views and ≈17K impressions totals; the visual collection focuses on the first period after joining. The view total combines platform-reported Meta content views and TikTok video views, whose definitions differ. An overlapping Facebook-only snapshot is excluded from the total. Reach and LinkedIn impressions are reported separately. Dates differ slightly by platform, and the before and after windows have different lengths. Tap any screenshot to inspect the original.</p>
+          </section>
         </article>
 
         <article class="case-study maa-case" id="maa-althahab" data-reveal>
@@ -2009,14 +2499,14 @@
                 <span>Editing &amp; Delivery</span>
               </div>
               <div class="maa-social-actions" aria-label="Maa Althahab pages">
-                <a class="maa-social-link" href="https://www.facebook.com/maa.althahab.eg" target="_blank" rel="noopener"><svg class="platform-icon" aria-hidden="true"><use href="#icon-facebook"></use></svg>Facebook</a>
-                <a class="maa-social-link" href="https://www.instagram.com/maa.althahab.official/" target="_blank" rel="noopener"><svg class="platform-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a>
+                <a class="maa-social-link" href="https://www.facebook.com/maa.althahab.eg" target="_blank" rel="noopener" aria-label="Maa Althahab on Facebook"><svg class="platform-icon" aria-hidden="true"><use href="#icon-facebook"></use></svg>Facebook</a>
+                <a class="maa-social-link" href="https://www.instagram.com/maa.althahab.official/" target="_blank" rel="noopener" aria-label="Maa Althahab on Instagram"><svg class="platform-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a>
               </div>
             </div>
 
             <div>
               <figure class="key-visual">
-                <img src="assets/images/maa-althahab-musk-damas.webp" alt="Maa Althahab Musk Damas campaign key visual" loading="lazy">
+                <img src="assets/images/maa-althahab-musk-damas.webp" alt="Maa Althahab Musk Damas campaign key visual" loading="lazy" width="1280" height="1600">
                 <figcaption class="asset-label">01 · Key Visual</figcaption>
               </figure>
               <a class="quality-link image-download" href="assets/media/full/maa-althahab-key-visual.png" target="_blank" rel="noopener">
@@ -2084,7 +2574,7 @@
             <article class="reel-card">
               <a class="reel-cover" href="https://www.instagram.com/elraawy1/reel/Dc1PnEKqiZe/" target="_blank" rel="noopener" aria-label="Watch Coffee Can Land You in Jail on Instagram">
                 <span class="reel-index">01</span>
-                <img src="assets/images/reel-coffee.webp" alt="Cover for Coffee Can Land You in Jail Reel" loading="lazy">
+                <img src="assets/images/reel-coffee.webp" alt="Cover for Coffee Can Land You in Jail Reel" loading="lazy" width="506" height="900">
               </a>
               <div class="reel-meta">
                 <h4>Coffee Can Land You in Jail</h4>
@@ -2099,7 +2589,7 @@
             <article class="reel-card">
               <a class="reel-cover" href="https://www.instagram.com/elraawy1/reel/DcwIGDLqT-f/" target="_blank" rel="noopener" aria-label="Watch Why We Notice Blue on Instagram">
                 <span class="reel-index">02</span>
-                <img src="assets/images/reel-blue.webp" alt="Cover for Why We Notice Blue Reel" loading="lazy">
+                <img src="assets/images/reel-blue.webp" alt="Cover for Why We Notice Blue Reel" loading="lazy" width="506" height="900">
               </a>
               <div class="reel-meta">
                 <h4>Why We Notice Blue</h4>
@@ -2114,7 +2604,7 @@
             <article class="reel-card">
               <a class="reel-cover" href="https://www.instagram.com/elraawy1/reel/Dco11rfxwnS/" target="_blank" rel="noopener" aria-label="Watch The 80 20 Rule on Instagram">
                 <span class="reel-index">03</span>
-                <img src="assets/images/reel-8020.webp" alt="Cover for The 80 20 Rule Reel" loading="lazy">
+                <img src="assets/images/reel-8020.webp" alt="Cover for The 80 20 Rule Reel" loading="lazy" width="506" height="900">
               </a>
               <div class="reel-meta">
                 <h4>The 80/20 Rule</h4>
@@ -2129,7 +2619,7 @@
             <article class="reel-card">
               <a class="reel-cover" href="https://www.instagram.com/elraawy1/reel/Dcl2AZWqdWx/" target="_blank" rel="noopener" aria-label="Watch Behind the Scenes on Instagram">
                 <span class="reel-index">04</span>
-                <img src="assets/images/reel-bts.webp" alt="Cover for a behind-the-scenes Reel" loading="lazy">
+                <img src="assets/images/reel-bts.webp" alt="Cover for a behind-the-scenes Reel" loading="lazy" width="506" height="900">
               </a>
               <div class="reel-meta">
                 <h4>Behind the Scenes</h4>
@@ -2147,11 +2637,11 @@
           <div class="gaming-panel">
             <div>
               <div class="project-logo">
-                <img src="assets/images/gaming-logo-hq.png" alt="Gaming content page logo" loading="lazy">
+                <img src="assets/images/gaming-logo-hq.png" alt="Gaming content page logo" loading="lazy" width="900" height="900">
               </div>
               <h3>Gaming Content Growth</h3>
               <p>Scaled a gaming content page through high-volume short-form concepts, consistent publishing, strong packaging, and audience feedback loops.</p>
-              <a class="page-link" href="https://www.tiktok.com/@zisjooff" target="_blank" rel="noopener"><svg class="platform-icon" aria-hidden="true"><use href="#icon-tiktok"></use></svg>TikTok</a>
+              <a class="page-link" href="https://www.tiktok.com/@zisjooff" target="_blank" rel="noopener" aria-label="Gaming channel on TikTok"><svg class="platform-icon" aria-hidden="true"><use href="#icon-tiktok"></use></svg>TikTok</a>
             </div>
             <div class="gaming-stats" aria-label="Gaming content results">
               <div class="gaming-stat">
@@ -2163,7 +2653,7 @@
                 <span>Followers</span>
               </div>
               <div class="gaming-stat">
-                <strong aria-label="More than 415 thousand likes"><span aria-hidden="true" data-count-up data-count-to="415" data-count-suffix="K+">415K+</span></strong>
+                <strong aria-label="About 420 thousand likes"><span aria-hidden="true">≈</span><span aria-hidden="true" data-count-up data-count-to="420" data-count-suffix="K">420K</span></strong>
                 <span>Likes</span>
               </div>
             </div>
@@ -2188,7 +2678,7 @@
         <article class="case-study twentyfive" id="twentyfive" data-reveal>
           <div class="twentyfive-copy">
             <div class="twentyfive-logo">
-              <img src="assets/images/20five-logo-hq.png" alt="20five logo" loading="lazy">
+              <img src="assets/images/20five-logo-hq.png" alt="20five logo" loading="lazy" width="1449" height="1447">
             </div>
             <span class="role-chip">Video Content Creator · May — Jul 2026</span>
             <h3>20five</h3>
@@ -2201,16 +2691,16 @@
               <span>Editing</span>
             </div>
             <div class="card-actions" aria-label="20five page">
-              <a class="page-link" href="https://www.instagram.com/20five.co/" target="_blank" rel="noopener"><svg class="platform-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a>
+              <a class="page-link" href="https://www.instagram.com/20five.co/" target="_blank" rel="noopener" aria-label="20five on Instagram"><svg class="platform-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a>
             </div>
           </div>
 
-          <div class="twentyfive-gallery" aria-label="Behind the scenes at 20five">
-            <figure><img src="assets/images/20five-shot-hq-1.webp" alt="Youssef El Rawy after a 20five production" loading="lazy"></figure>
-            <figure><img src="assets/images/20five-shot-hq-2.webp" alt="Youssef El Rawy operating a camera on a 20five set" loading="lazy"></figure>
-            <figure><img src="assets/images/20five-shot-hq-3.webp" alt="Directing an on-camera contributor during a 20five shoot" loading="lazy"></figure>
-            <figure><img src="assets/images/20five-shot-hq-4.webp" alt="Behind the scenes of a 20five office production" loading="lazy"></figure>
-            <figure><img src="assets/images/20five-shot-hq-5.webp" alt="Camera and lighting setup during a 20five production" loading="lazy"></figure>
+          <div class="twentyfive-gallery" aria-label="Behind the scenes at 20five; scroll horizontally for more photos" tabindex="0">
+            <figure><img src="assets/images/20five-shot-hq-1.webp" alt="Youssef El Rawy after a 20five production" loading="lazy" width="1800" height="2400"></figure>
+            <figure><img src="assets/images/20five-shot-hq-2.webp" alt="Youssef El Rawy operating a camera on a 20five set" loading="lazy" width="1800" height="2400"></figure>
+            <figure><img src="assets/images/20five-shot-hq-3.webp" alt="Directing an on-camera contributor during a 20five shoot" loading="lazy" width="1800" height="2400"></figure>
+            <figure><img src="assets/images/20five-shot-hq-4.webp" alt="Behind the scenes of a 20five office production" loading="lazy" width="1350" height="2400"></figure>
+            <figure><img src="assets/images/20five-shot-hq-5.webp" alt="Camera and lighting setup during a 20five production" loading="lazy" width="1351" height="2400"></figure>
           </div>
         </article>
       </div>
@@ -2226,78 +2716,77 @@
 
         <div class="timeline" data-reveal>
           <article class="timeline-item">
-            <div class="timeline-logo"><img src="assets/images/sauce-of-drip-logo-hq.png" alt="Sauce of Drip logo" loading="lazy"></div>
+            <div class="timeline-logo"><img src="assets/images/sauce-of-drip-logo-hq.png" alt="Sauce of Drip logo" loading="lazy" width="1536" height="1534"></div>
             <div class="timeline-copy">
               <h3>Sauce of Drip</h3>
               <span class="timeline-role">Brand Identity &amp; Operations</span>
               <p>Built the positioning, profile direction, social look, product presentation, and customer-facing content system for a curated thrift startup.</p>
-              <a class="page-link" href="https://www.instagram.com/sauceofdrip/" target="_blank" rel="noopener"><svg class="platform-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a>
+              <a class="page-link" href="https://www.instagram.com/sauceofdrip/" target="_blank" rel="noopener" aria-label="Sauce of Drip on Instagram"><svg class="platform-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a>
             </div>
           </article>
 
           <article class="timeline-item">
-            <div class="timeline-logo"><img src="assets/images/el-kenz-logo-hq.png" alt="El Kenz logo" loading="lazy"></div>
+            <div class="timeline-logo"><img src="assets/images/el-kenz-logo-hq.png" alt="El Kenz logo" loading="lazy" width="900" height="900"></div>
             <div class="timeline-copy">
               <h3>El Kenz</h3>
               <span class="timeline-role">Brand Direction</span>
               <p>Created a warm, recognizable visual identity and a more consistent, social-ready brand presence.</p>
-              <a class="page-link" href="https://www.instagram.com/elkenz_eg/" target="_blank" rel="noopener"><svg class="platform-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a>
+              <a class="page-link" href="https://www.instagram.com/elkenz_eg/" target="_blank" rel="noopener" aria-label="El Kenz on Instagram"><svg class="platform-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a>
             </div>
           </article>
 
           <article class="timeline-item">
-            <div class="timeline-logo"><img src="assets/images/enactus-logo-hq.png" alt="Enactus Cairo University logo" loading="lazy"></div>
+            <div class="timeline-logo"><img src="assets/images/enactus-logo-hq.png" alt="Enactus Cairo University logo" loading="lazy" width="1534" height="1536"></div>
             <div class="timeline-copy">
               <h3>Enactus Cairo University</h3>
-              <span class="timeline-role">Project Branding &amp; Content</span>
+              <span class="timeline-role">Project Branding &amp; Content · Sep 2025–Aug 2026</span>
               <p>Led visual identity work for five community projects and developed short-form campaign ideas while supporting PR and partnership activity.</p>
-              <div class="card-actions" aria-label="Enactus pages">
-                <a class="page-link" href="https://www.facebook.com/enactus.Egypt" target="_blank" rel="noopener"><svg class="platform-icon" aria-hidden="true"><use href="#icon-facebook"></use></svg>Facebook</a>
-                <a class="page-link" href="https://www.instagram.com/enactuscairouniversity/" target="_blank" rel="noopener"><svg class="platform-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a>
+              <div class="card-actions" aria-label="Enactus Cairo University page">
+                <a class="page-link" href="https://www.instagram.com/enactuscairouniversity/" target="_blank" rel="noopener" aria-label="Enactus Cairo University on Instagram"><svg class="platform-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a>
               </div>
             </div>
           </article>
 
           <article class="timeline-item">
-            <div class="timeline-logo"><img src="assets/images/flowrista-logo-hq.png" alt="Flowrista logo" loading="lazy"></div>
+            <div class="timeline-logo"><img src="assets/images/flowrista-logo-hq.png" alt="Flowrista logo" loading="lazy" width="900" height="900"></div>
             <div class="timeline-copy">
               <h3>Flowrista</h3>
               <span class="timeline-role">Seasonal Content Direction</span>
               <p>Created Mother’s Day and Valentine’s campaign concepts across Reels, Stories, hooks, captions, and offer-led content.</p>
               <div class="card-actions">
-                <a class="page-link" href="https://www.instagram.com/flowristaco/" target="_blank" rel="noopener"><svg class="platform-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a>
-                <a class="page-link" href="assets/documents/flowrista-internship-certificate.jpg" target="_blank" rel="noopener"><svg class="platform-icon" aria-hidden="true"><use href="#icon-certificate"></use></svg>Certificate</a>
+                <a class="page-link" href="https://www.instagram.com/flowristaco/" target="_blank" rel="noopener" aria-label="Flowrista on Instagram"><svg class="platform-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a>
+                <a class="page-link" href="assets/documents/flowrista-internship-certificate.jpg" target="_blank" rel="noopener" aria-label="View Flowrista internship certificate"><svg class="platform-icon" aria-hidden="true"><use href="#icon-certificate"></use></svg>Certificate</a>
               </div>
             </div>
           </article>
 
           <article class="timeline-item">
-            <div class="timeline-logo"><img src="assets/images/fces-logo-hq.png" alt="FCES Student Council logo" loading="lazy"></div>
+            <div class="timeline-logo"><img src="assets/images/fces-logo-hq.png" alt="FCES Student Council logo" loading="lazy" width="900" height="900"></div>
             <div class="timeline-copy">
               <h3>FCES Student Council</h3>
-              <span class="timeline-role">Social Content</span>
+              <span class="timeline-role">Social Content · Sep 2025–Aug 2026</span>
               <p>Developed campus-first short-form concepts designed for quick attention, relevance, and shareability.</p>
-              <a class="page-link" href="https://www.facebook.com/FCESStudentsCouncil" target="_blank" rel="noopener"><svg class="platform-icon" aria-hidden="true"><use href="#icon-facebook"></use></svg>Facebook</a>
+              <a class="page-link" href="https://www.facebook.com/FCESStudentsCouncil" target="_blank" rel="noopener" aria-label="FCES Student Council on Facebook"><svg class="platform-icon" aria-hidden="true"><use href="#icon-facebook"></use></svg>Facebook</a>
             </div>
           </article>
 
           <article class="timeline-item">
-            <div class="timeline-logo"><img src="assets/images/minders-logo-hq.png" alt="Minders logo" loading="lazy"></div>
+            <div class="timeline-logo"><img src="assets/images/minders-logo-hq.png" alt="Minders logo" loading="lazy" width="900" height="900"></div>
             <div class="timeline-copy">
               <h3>Minders</h3>
-              <span class="timeline-role">Content Workflow</span>
+              <span class="timeline-role">Content Workflow · Sep 2025–Aug 2026</span>
               <p>Supported a Ramadan campaign through filming, scripting, editing, posting, and audience-aware publishing decisions.</p>
-              <a class="page-link" href="https://www.facebook.com/MindersORG" target="_blank" rel="noopener"><svg class="platform-icon" aria-hidden="true"><use href="#icon-facebook"></use></svg>Facebook</a>
+              <a class="page-link" href="https://www.facebook.com/MindersORG" target="_blank" rel="noopener" aria-label="Minders on Facebook"><svg class="platform-icon" aria-hidden="true"><use href="#icon-facebook"></use></svg>Facebook</a>
             </div>
           </article>
 
           <article class="timeline-item">
-            <div class="timeline-logo"><img src="assets/images/career-summit-logo-hq.png" alt="Egypt Career Summit logo" loading="lazy"></div>
+            <div class="timeline-logo"><img src="assets/images/career-summit-logo-hq.png" alt="Egypt Career Summit logo" loading="lazy" width="900" height="900"></div>
             <div class="timeline-copy">
               <h3>Egypt Career Summit</h3>
               <span class="timeline-role">Event Coverage</span>
               <p>Captured highlights, interviews, and live updates, turning on-ground moments into timely social content.</p>
-              <a class="page-link" href="https://www.instagram.com/egyptcareersummitt/" target="_blank" rel="noopener"><svg class="platform-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a>
+              <a class="page-link" href="https://www.instagram.com/egyptcareersummitt/" target="_blank" rel="noopener" aria-label="Egypt Career Summit on Instagram"><svg class="platform-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a>
             </div>
           </article>
         </div>
@@ -2379,6 +2868,15 @@
 
   <script>
     (function () {
+      var mobileMenu = document.querySelector(".mobile-nav");
+      if (mobileMenu) {
+        mobileMenu.querySelectorAll('a[href^="#"]').forEach(function (link) {
+          link.addEventListener("click", function () {
+            mobileMenu.open = false;
+          });
+        });
+      }
+
       var revealItems = document.querySelectorAll("[data-reveal]");
       var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -2399,6 +2897,7 @@
         revealItems.forEach(function (item) {
           observer.observe(item);
         });
+        document.documentElement.classList.add("motion-ready");
       }
 
       var counters = document.querySelectorAll("[data-count-up]");
