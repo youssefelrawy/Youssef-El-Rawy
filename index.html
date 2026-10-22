@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0c0f0d">
   <meta name="description" content="Youssef El Rawy is a Cairo-based content creator and social media marketer whose work has generated 8M+ combined views and about 470K recorded likes.">
-  <meta property="og:title" content="Youssef El Rawy — Content Creator & Social Media Marketer">
+  <meta property="og:title" content="Youssef El Rawy — Content Creator & Social Media Manager">
   <meta property="og:description" content="Selected social media, short-form content, and commercial work generating 8M+ combined views and about 470K recorded likes.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://youssefelrawy.github.io/Youssef-El-Rawy/">
@@ -14,18 +14,18 @@
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="756">
   <meta property="og:image:height" content="756">
-  <meta property="og:image:alt" content="Youssef El Rawy — Content Creator and Social Media Marketer">
+  <meta property="og:image:alt" content="Youssef El Rawy — Content Creator and Social Media Manager">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Youssef El Rawy — Content Creator & Social Media Marketer">
+  <meta name="twitter:title" content="Youssef El Rawy — Content Creator & Social Media Manager">
   <meta name="twitter:description" content="Selected social media, short-form content, and commercial work generating 8M+ combined views and about 470K recorded likes.">
   <meta name="twitter:image" content="https://youssefelrawy.github.io/Youssef-El-Rawy/assets/images/youssef-el-rawy-share-v2.png">
-  <meta name="twitter:image:alt" content="Youssef El Rawy — Content Creator and Social Media Marketer">
+  <meta name="twitter:image:alt" content="Youssef El Rawy — Content Creator and Social Media Manager">
   <link rel="canonical" href="https://youssefelrawy.github.io/Youssef-El-Rawy/">
   <link rel="icon" href="assets/images/profile-nav.webp" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-  <title>Youssef El Rawy — Content Creator & Social Media Marketer</title>
+  <title>Youssef El Rawy — Content Creator & Social Media Manager</title>
   <style>
     :root {
       --bg: #0c0f0d;
@@ -1164,9 +1164,20 @@
     }
 
     .key-visual img {
+      display: block;
       width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
+      height: auto;
+      aspect-ratio: auto;
+      object-fit: contain;
+    }
+
+    .key-visual .asset-label {
+      position: static;
+      display: block;
+      padding: 12px 16px;
+      border: 0;
+      border-radius: 0;
+      background: rgba(20, 7, 4, 0.5);
     }
 
     .asset-label {
@@ -1240,9 +1251,11 @@
     }
 
     .video-frame video {
+      display: block;
       width: 100%;
+      height: auto;
       aspect-ratio: 9 / 16;
-      object-fit: cover;
+      object-fit: contain;
       background: #160604;
     }
 
@@ -2325,6 +2338,31 @@
         animation: none;
       }
     }
+
+    .case-role { margin: 18px 0 12px; color: var(--gold-pale); font-weight: 750; font-size: 1rem; }
+    .redecor-original-link { display: inline-flex; align-items: center; gap: 10px; margin-top: 8px; padding-bottom: 6px; color: #562431; border-bottom: 1px solid #b5a18d; font-size: 0.88rem; font-weight: 750; }
+    .redecor-original-link:hover { color: #8e3349; }
+    .credential-card { display: flex; align-items: center; gap: 14px; margin-top: 20px; padding: 13px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,0.025); transition: border-color 180ms ease; }
+    .credential-card:hover { border-color: var(--gold-pale); }
+    .credential-thumb { display: block; flex: 0 0 70px; height: 102px; overflow: hidden; border-radius: 5px; background: #121713; }
+    .credential-thumb img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .credential-thumb--landscape { flex-basis: 110px; height: 78px; }
+    .credential-thumb--landscape img { object-fit: cover; object-position: center; }
+    .credential-copy { display: grid; gap: 6px; min-width: 0; font-size: 0.78rem; line-height: 1.5; }
+    .credential-copy strong { color: var(--ink); font-size: 0.85rem; }
+    .credential-copy > span { color: var(--muted); }
+    .credential-copy small { color: var(--gold-pale); font-size: 0.75rem; font-weight: 750; }
+    .profile-evidence { margin: 20px 0 0; }
+    .profile-evidence a { display: block; overflow: hidden; border: 1px solid var(--line); border-radius: 10px; }
+    .profile-evidence img { display: block; width: 100%; height: auto; }
+    .profile-evidence figcaption { display: grid; gap: 3px; margin-top: 9px; color: var(--muted); font-size: 0.73rem; line-height: 1.5; }
+    .profile-evidence figcaption span { color: var(--gold-pale); }
+    @media (max-width: 580px) {
+      .credential-card { flex-wrap: wrap; }
+      .credential-copy { flex: 1 1 140px; }
+      .case-role { font-size: 0.95rem; }
+    }
+    .documentation-note { margin-top: 18px; color: var(--muted); font-size: 0.78rem; line-height: 1.6; }
   </style>
 </head>
 <body>
@@ -2386,7 +2424,7 @@
         <p class="eyebrow">Cairo, Egypt · Content built end to end</p>
         <h1 id="hero-title">
           <span class="hero-name">Youssef<br>El Rawy</span>
-          <span class="hero-role">Content Creator &amp;<br>Social Media Marketer</span>
+          <span class="hero-role">Content Creator &amp;<br>Social Media Manager</span>
         </h1>
         <p class="lede">I turn business goals into content people want to watch—from strategy, research, and scripting to shooting, editing, publishing, community, and analytics.</p>
         <div class="actions">
@@ -2455,8 +2493,9 @@
             <div class="case-copy redecor-copy">
               <div>
                 <span class="case-kicker">Full-time · Aug 2026 — Present</span>
+                <p class="case-role">Content Creator &amp; Social Media Manager</p>
                 <h3>Redecor &amp; More</h3>
-                <p class="case-summary">Leading social content from strategy and research through scripting, production, editing, publishing, community management, and performance analysis.</p>
+                <p class="case-summary">Owning the social media workflow across Instagram, Facebook, TikTok, and LinkedIn: strategy, competitor research, content calendars, scripts, filming, editing, publishing, community management, and performance reporting.</p>
                 <div class="ownership" aria-label="Responsibilities at Redecor and More">
                   <span>Strategy</span>
                   <span>Research</span>
@@ -2493,9 +2532,10 @@
               <span class="redecor-eyebrow">01 / The commercial</span>
               <h4 id="redecor-commercial-title">Designed for life in motion.</h4>
               <p>Brand storytelling for an interior design and fit-out company.</p>
+              <a class="redecor-original-link" href="assets/media/redecor-commercial-web.mp4" target="_blank" rel="noopener">Open full video · 720p · 8.2 MB <span aria-hidden="true">↗</span></a>
             </div>
             <div class="redecor-film-frame">
-              <video controls playsinline preload="metadata" width="720" height="1280" poster="assets/images/redecor-commercial-cover.webp" aria-label="Redecor and More company commercial">
+              <video controls playsinline preload="none" width="720" height="1280" poster="assets/images/redecor-commercial-poster.webp" aria-label="Redecor and More company commercial">
                 <source src="assets/media/redecor-commercial-web.mp4" type="video/mp4">
                 Your browser does not support embedded video.
               </video>
@@ -2595,7 +2635,7 @@
         <article class="case-study maa-case" id="maa-althahab" data-reveal>
           <div class="maa-top">
             <div class="maa-title">
-              <span class="case-kicker">Official company commercial assignment</span>
+              <span class="case-kicker">Commercial content assignment</span>
               <h3>Maa Althahab<br>Musk Damas</h3>
               <p>Handled the task from concept to final delivery, creating a connected campaign system across the main Reel, Story, and key visual.</p>
               <div class="maa-roles" aria-label="Maa Althahab commercial responsibilities">
@@ -2630,7 +2670,7 @@
             <div class="video-grid">
               <article class="video-card">
                 <div class="video-frame">
-                  <video controls playsinline preload="metadata" poster="assets/images/maa-reel-cover-pro-v2.webp" aria-label="Maa Althahab Musk Damas commercial Reel">
+                  <video controls playsinline preload="none" poster="assets/images/maa-reel-cover-pro-v2.webp" aria-label="Maa Althahab Musk Damas commercial Reel">
                     <source src="assets/media/maa-althahab-reel-web.mp4" type="video/mp4">
                     Your browser does not support embedded video.
                   </video>
@@ -2648,7 +2688,7 @@
 
               <article class="video-card">
                 <div class="video-frame">
-                  <video controls playsinline preload="metadata" poster="assets/images/maa-story-personal-cover-v3.webp" aria-label="Maa Althahab Musk Damas campaign Story featuring Youssef El Rawy">
+                  <video controls playsinline preload="none" poster="assets/images/maa-story-personal-cover-v3.webp" aria-label="Maa Althahab Musk Damas campaign Story featuring Youssef El Rawy">
                     <source src="assets/media/maa-althahab-story-web.mp4" type="video/mp4">
                     Your browser does not support embedded video.
                   </video>
@@ -2841,9 +2881,15 @@
             <div class="timeline-logo"><img src="assets/images/sauce-of-drip-logo-hq.png" alt="Sauce of Drip logo" loading="lazy" width="1536" height="1534"></div>
             <div class="timeline-copy">
               <h3>Sauce of Drip</h3>
-              <span class="timeline-role">Brand Identity &amp; Operations · Jan–Dec 2025</span>
+              <span class="timeline-role">Founder &amp; Creative Lead · Jan–Dec 2025</span>
               <p>Built the positioning, profile direction, social look, product presentation, and customer-facing content system for a curated thrift startup.</p>
               <a class="page-link" href="https://www.instagram.com/sauceofdrip/" target="_blank" rel="noopener" aria-label="Sauce of Drip on Instagram"><svg class="platform-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a>
+              <figure class="profile-evidence">
+                <a href="assets/images/sauce-of-drip-profile-proof.jpg" target="_blank" rel="noopener" aria-label="Open the supplied Sauce of Drip profile screenshot">
+                  <img src="assets/images/sauce-of-drip-profile-proof.jpg" alt="Sauce of Drip profile screenshot showing its vintage store positioning, 25 posts, and 1,270 followers at the time of capture" loading="lazy" width="1536" height="919">
+                </a>
+                <figcaption>Brand profile · account snapshot <span>1,270 followers at capture</span></figcaption>
+              </figure>
             </div>
           </article>
 
@@ -2861,11 +2907,15 @@
             <div class="timeline-logo"><img src="assets/images/enactus-logo-hq.png" alt="Enactus Cairo University logo" loading="lazy" width="1534" height="1536"></div>
             <div class="timeline-copy">
               <h3>Enactus Cairo University</h3>
-              <span class="timeline-role">Project Branding &amp; Content · Sep 2025–Aug 2026</span>
+              <span class="timeline-role">Marketing &amp; PR · Dec 2025–Sep 2026</span>
               <p>Led visual identity work for five community projects and developed short-form campaign ideas while supporting PR and partnership activity.</p>
-              <div class="card-actions" aria-label="Enactus Cairo University page">
+              <div class="card-actions" aria-label="Enactus Cairo University links">
                 <a class="page-link" href="https://www.instagram.com/enactuscairouniversity/" target="_blank" rel="noopener" aria-label="Enactus Cairo University on Instagram"><svg class="platform-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a>
               </div>
+              <a class="credential-card" href="assets/documents/enactus-membership-letter.jpg" target="_blank" rel="noopener" aria-label="View Enactus Cairo University membership letter for Marketing and PR, December 2025 to September 2026">
+                <span class="credential-thumb"><img src="assets/documents/enactus-membership-letter.jpg" alt="Enactus Cairo University membership letter" loading="lazy" width="1051" height="1536"></span>
+                <span class="credential-copy"><strong>Membership letter</strong><span>Marketing &amp; PR · Dec 2025–Sep 2026</span><small>View original <span aria-hidden="true">↗</span></small></span>
+              </a>
             </div>
           </article>
 
@@ -2889,6 +2939,7 @@
               <span class="timeline-role">Social Content · Sep 2025–Aug 2026</span>
               <p>Developed campus-first short-form concepts designed for quick attention, relevance, and shareability.</p>
               <a class="page-link" href="https://www.facebook.com/FCESStudentsCouncil" target="_blank" rel="noopener" aria-label="FCES Student Council on Facebook"><svg class="platform-icon" aria-hidden="true"><use href="#icon-facebook"></use></svg>Facebook</a>
+              <p class="documentation-note">SC’26 participation certificate available on request.</p>
             </div>
           </article>
 
@@ -2976,7 +3027,7 @@
             <a class="button" href="https://www.linkedin.com/in/youssef-mohamed-mkt" target="_blank" rel="noopener"><svg class="platform-icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg>LinkedIn</a>
             <a class="button" href="tel:+201011777413">Phone</a>
             <a class="button" href="https://wa.me/201011777413" target="_blank" rel="noopener">WhatsApp</a>
-            <a class="button" href="assets/resume/Youssef_El_Rawy_Resume.pdf?v=20261022" download="Youssef_El_Rawy_Resume.pdf">Download Resume</a>
+            <a class="button" href="assets/resume/Youssef_El_Rawy_Resume.pdf?v=20261022-v2" download="Youssef_El_Rawy_Resume.pdf">Download Resume</a>
           </div>
         </div>
       </div>
@@ -2984,7 +3035,7 @@
   </main>
 
   <footer class="shell footer">
-    <span><strong>Youssef El Rawy</strong> · Content Creator &amp; Social Media Marketer</span>
+    <span><strong>Youssef El Rawy</strong> · Content Creator &amp; Social Media Manager</span>
     <span>Updated 22 October 2026</span>
   </footer>
 
@@ -3111,7 +3162,7 @@
     "@type": "Person",
     "name": "Youssef El Rawy",
     "url": "https://youssefelrawy.github.io/Youssef-El-Rawy/",
-    "jobTitle": "Content Creator and Social Media Marketer",
+    "jobTitle": "Content Creator and Social Media Manager",
     "email": "mailto:youssef.mohamed1176@gmail.com",
     "sameAs": [
       "https://www.instagram.com/elraawy1/",
