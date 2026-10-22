@@ -1077,7 +1077,7 @@
 
     .maa-top {
       display: grid;
-      grid-template-columns: 0.78fr 1.22fr;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
       gap: clamp(26px, 5vw, 64px);
       align-items: center;
       padding: clamp(34px, 5.5vw, 68px);
@@ -1097,11 +1097,13 @@
       max-width: 490px;
       margin-bottom: 28px;
       color: rgba(255, 247, 239, 0.78);
+      font-size: 1rem;
+      line-height: 1.7;
     }
 
     .maa-roles {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
       gap: 8px;
     }
 
@@ -1113,6 +1115,7 @@
       color: rgba(255, 247, 239, 0.9);
       font-size: 0.78rem;
       font-weight: 750;
+      overflow-wrap: anywhere;
     }
 
     .maa-social-link {
@@ -2363,6 +2366,25 @@
       .case-role { font-size: 0.95rem; }
     }
     .documentation-note { margin-top: 18px; color: var(--muted); font-size: 0.78rem; line-height: 1.6; }
+
+    .maa-top > *, .maa-case .video-card > * { min-width: 0; }
+    .maa-top { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    .maa-case .video-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
+    .maa-case .video-card { min-width: 0; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr); }
+    .maa-case .video-copy { overflow-wrap: anywhere; }
+    @media (max-width: 820px) {
+      .maa-top { grid-template-columns: minmax(0, 1fr); align-items: start; }
+    }
+    @media (max-width: 560px) {
+      .maa-top { gap: 26px; padding: 28px 22px; }
+      .maa-title h3 { font-size: clamp(2rem, 8vw, 2.8rem); }
+      .maa-title p { margin-bottom: 22px; }
+      .maa-roles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .maa-roles span { padding: 10px; font-size: 0.75rem; line-height: 1.5; }
+      .maa-case .video-card { grid-template-columns: minmax(0, 1fr); }
+      .maa-case .video-frame { width: min(100%, 300px); }
+      .maa-case .deliverables-head { padding-inline: 4px; }
+    }
   </style>
 </head>
 <body>
@@ -2535,7 +2557,7 @@
               <a class="redecor-original-link" href="assets/media/redecor-commercial-web.mp4" target="_blank" rel="noopener">Open full video · 720p · 8.2 MB <span aria-hidden="true">↗</span></a>
             </div>
             <div class="redecor-film-frame">
-              <video controls playsinline preload="none" width="720" height="1280" poster="assets/images/redecor-commercial-poster.webp" aria-label="Redecor and More company commercial">
+              <video controls playsinline preload="none" width="720" height="1280" poster="assets/images/redecor-commercial-cover.webp" aria-label="Redecor and More company commercial">
                 <source src="assets/media/redecor-commercial-web.mp4" type="video/mp4">
                 Your browser does not support embedded video.
               </video>
@@ -3027,7 +3049,7 @@
             <a class="button" href="https://www.linkedin.com/in/youssef-mohamed-mkt" target="_blank" rel="noopener"><svg class="platform-icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg>LinkedIn</a>
             <a class="button" href="tel:+201011777413">Phone</a>
             <a class="button" href="https://wa.me/201011777413" target="_blank" rel="noopener">WhatsApp</a>
-            <a class="button" href="assets/resume/Youssef_El_Rawy_Resume.pdf?v=20261022-v2" download="Youssef_El_Rawy_Resume.pdf">Download Resume</a>
+            <a class="button" href="assets/resume/Youssef_El_Rawy_Resume.pdf?v=20261022-v3" download="Youssef_El_Rawy_Resume.pdf">Download Resume</a>
           </div>
         </div>
       </div>
