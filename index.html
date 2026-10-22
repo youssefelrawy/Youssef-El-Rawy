@@ -2368,10 +2368,39 @@
     .documentation-note { margin-top: 18px; color: var(--muted); font-size: 0.78rem; line-height: 1.6; }
 
     .maa-top > *, .maa-case .video-card > * { min-width: 0; }
-    .maa-top { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-    .maa-case .video-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
-    .maa-case .video-card { min-width: 0; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr); }
-    .maa-case .video-copy { overflow-wrap: anywhere; }
+    .maa-case { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; word-break: normal; overflow-wrap: normal; hyphens: none; }
+    .maa-case .video-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+      gap: 20px;
+      align-items: stretch;
+    }
+    .maa-case .video-card {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 22px;
+      min-width: 0;
+      padding: 22px;
+    }
+    .maa-case .video-frame { flex: none; width: min(100%, 300px); margin-inline: auto; }
+    .maa-case .video-copy {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      width: 100%;
+      min-width: 0;
+      overflow-wrap: normal;
+      word-break: normal;
+      hyphens: none;
+      white-space: normal;
+    }
+    .maa-case .video-copy h4 { margin: 0; font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.25; letter-spacing: -0.02em; }
+    .maa-case .video-copy p { margin: 0; font-size: 0.9rem; line-height: 1.65; }
+    .maa-case .video-copy .quality-link { max-width: 100%; margin-top: auto; padding-top: 8px; font-size: 0.72rem; line-height: 1.5; letter-spacing: 0.025em; }
+    .maa-case .quality-link svg { flex: none; }
+    .maa-case .maa-roles span { overflow-wrap: normal; word-break: normal; hyphens: none; }
     @media (max-width: 820px) {
       .maa-top { grid-template-columns: minmax(0, 1fr); align-items: start; }
     }
@@ -2381,7 +2410,7 @@
       .maa-title p { margin-bottom: 22px; }
       .maa-roles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .maa-roles span { padding: 10px; font-size: 0.75rem; line-height: 1.5; }
-      .maa-case .video-card { grid-template-columns: minmax(0, 1fr); }
+      .maa-case .video-card { gap: 18px; padding: 18px; }
       .maa-case .video-frame { width: min(100%, 300px); }
       .maa-case .deliverables-head { padding-inline: 4px; }
     }
@@ -2688,7 +2717,7 @@
           </div>
 
           <div class="maa-deliverables">
-            <div class="deliverables-head">
+            <div class="deliverables-head" id="maa-videos">
               <h4>Campaign video deliverables</h4>
               <span>Web previews + full-quality originals</span>
             </div>
@@ -2703,7 +2732,7 @@
                 </div>
                 <div class="video-copy">
                   <h4>Hero Commercial Reel</h4>
-                  <p>The main product film, packaged for vertical social viewing and premium product presentation.</p>
+                  <p>The main product film, created for vertical social campaigns.</p>
                   <a class="quality-link" href="assets/media/full/maa-althahab-reel-4k.mp4" target="_blank" rel="noopener">
                     Open 4K original · 82 MB
                     <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M14 5h5v5M19 5l-9 9M19 14v5H5V5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -2721,7 +2750,7 @@
                 </div>
                 <div class="video-copy">
                   <h4>Supporting Story</h4>
-                  <p>A shorter supporting cut designed to extend the campaign across the full-screen Story format.</p>
+                  <p>A shorter companion film for full-screen Stories.</p>
                   <a class="quality-link" href="assets/media/full/maa-althahab-story-4k.mp4" target="_blank" rel="noopener">
                     Open 4K original · 52 MB
                     <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M14 5h5v5M19 5l-9 9M19 14v5H5V5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
