@@ -2385,6 +2385,9 @@
       .maa-case .video-frame { width: min(100%, 300px); }
       .maa-case .deliverables-head { padding-inline: 4px; }
     }
+    .creator-pair { gap: 20px; margin-block: clamp(30px, 5vw, 56px); }
+    .creator-pair > .case-study { min-width: 0; }
+    .creator-pair > .case-study + .case-study { margin-top: 0; }
   </style>
 </head>
 <body>
@@ -2817,15 +2820,16 @@
           </div>
         </section>
 
-        <article class="case-study split-case" id="gaming" data-reveal>
-          <div class="gaming-panel">
+        <div class="split-case creator-pair" data-reveal>
+          <article class="case-study gaming-panel" id="gaming" aria-label="Gaming content: TikTok only">
             <div>
               <div class="project-logo">
                 <img src="assets/images/gaming-logo-hq.png" alt="Gaming content page logo" loading="lazy" width="900" height="900">
               </div>
+              <span class="role-chip">Gaming content · 2020–2024</span>
               <h3>Gaming Content Growth</h3>
               <p>Scaled a gaming content page through high-volume short-form concepts, consistent publishing, strong packaging, and audience feedback loops.</p>
-              <a class="page-link" href="https://www.tiktok.com/@zisjooff" target="_blank" rel="noopener" aria-label="Gaming channel on TikTok"><svg class="platform-icon" aria-hidden="true"><use href="#icon-tiktok"></use></svg>TikTok</a>
+              <a class="page-link" href="https://www.tiktok.com/@zisjooff?_r=1&amp;_t=ZS-9AlVXNrlVSC" target="_blank" rel="noopener" aria-label="Gaming channel on TikTok"><svg class="platform-icon" aria-hidden="true"><use href="#icon-tiktok"></use></svg>TikTok</a>
             </div>
             <div class="gaming-stats" aria-label="Gaming content results">
               <div class="gaming-stat">
@@ -2841,10 +2845,10 @@
                 <span>Likes</span>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="creator-panel">
-            <span class="role-chip">Creator Positioning</span>
+          <article class="case-study creator-panel" id="personal-content" aria-label="Personal educational content">
+            <span class="role-chip">Personal educational content</span>
             <h3>Ideas that earn attention—and keep it.</h3>
             <p>My personal content combines curiosity, simple storytelling, and sharp hooks to make useful ideas feel entertaining.</p>
             <div class="creator-points">
@@ -2856,8 +2860,8 @@
               <a class="button" href="https://www.instagram.com/elraawy1/" target="_blank" rel="noopener"><svg class="platform-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a>
               <a class="button" href="https://www.tiktok.com/@elraawy1" target="_blank" rel="noopener"><svg class="platform-icon" aria-hidden="true"><use href="#icon-tiktok"></use></svg>TikTok</a>
             </div>
-          </div>
-        </article>
+          </article>
+        </div>
 
         <article class="case-study twentyfive" id="twentyfive" data-reveal>
           <div class="twentyfive-copy">
@@ -2961,7 +2965,10 @@
               <span class="timeline-role">Social Content · Sep 2025–Aug 2026</span>
               <p>Developed campus-first short-form concepts designed for quick attention, relevance, and shareability.</p>
               <a class="page-link" href="https://www.facebook.com/FCESStudentsCouncil" target="_blank" rel="noopener" aria-label="FCES Student Council on Facebook"><svg class="platform-icon" aria-hidden="true"><use href="#icon-facebook"></use></svg>Facebook</a>
-              <p class="documentation-note">SC’26 participation certificate available on request.</p>
+              <a class="credential-card" id="fces-certificate" href="assets/documents/fces-participation-certificate.jpg" target="_blank" rel="noopener" aria-label="View FCES Student Council participation certificate for season SC26">
+                <span class="credential-thumb credential-thumb--landscape"><img src="assets/documents/fces-participation-certificate.jpg" alt="Blue FCES Student Council participation certificate awarded to Youssef Mohamed" loading="lazy" width="709" height="1536"></span>
+                <span class="credential-copy"><strong>Participation certificate</strong><span>FCES Student Council · SC’26</span><small>View original <span aria-hidden="true">↗</span></small></span>
+              </a>
             </div>
           </article>
 
@@ -3049,7 +3056,7 @@
             <a class="button" href="https://www.linkedin.com/in/youssef-mohamed-mkt" target="_blank" rel="noopener"><svg class="platform-icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg>LinkedIn</a>
             <a class="button" href="tel:+201011777413">Phone</a>
             <a class="button" href="https://wa.me/201011777413" target="_blank" rel="noopener">WhatsApp</a>
-            <a class="button" href="assets/resume/Youssef_El_Rawy_Resume.pdf?v=20261022-v3" download="Youssef_El_Rawy_Resume.pdf">Download Resume</a>
+            <a class="button" href="assets/resume/Youssef_El_Rawy_Resume.pdf?v=20261022-v4" download="Youssef_El_Rawy_Resume.pdf">Download Resume</a>
           </div>
         </div>
       </div>
