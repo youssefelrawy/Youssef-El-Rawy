@@ -1043,8 +1043,7 @@
     .redecor-organic-note { display: inline-block; margin: 0 0 24px; color: #d5e4be; font-size: 0.9rem; font-weight: 750; }
 
     .redecor-source-details { border-top: 1px solid var(--line); padding-top: 22px; }
-    .redecor-source-details summary { width: fit-content; cursor: pointer; color: #f0d994; font-size: 1rem; font-weight: 750; }
-    .redecor-source-details[open] summary { margin-bottom: 24px; }
+    .redecor-source-title { margin: 0 0 24px; color: #f0d994; font-size: 1.15rem; font-weight: 750; }
     .redecor-proof-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
     .redecor-proof-board { min-width: 0; padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: #252d26; }
     .redecor-proof-board--after { border-color: rgba(225, 193, 132, 0.4); }
@@ -2437,8 +2436,8 @@
           <span class="proof-label">Personal Content Views</span>
         </div>
         <div class="proof-item" data-reveal>
-          <strong class="proof-value" aria-label="Approximately 470 thousand recorded likes across personal and gaming profiles"><span aria-hidden="true">≈</span><span aria-hidden="true" data-count-up data-count-to="470" data-count-suffix="K">470K</span></strong>
-          <span class="proof-label">Total Recorded Likes · Personal + Gaming</span>
+          <strong class="proof-value" aria-label="Approximately 50 thousand educational content likes, rounded up"><span aria-hidden="true">≈</span><span aria-hidden="true" data-count-up data-count-to="50" data-count-suffix="K">50K</span></strong>
+          <span class="proof-label">Educational Content Likes</span>
         </div>
       </div>
     </section>
@@ -2545,8 +2544,8 @@
             </div>
             <p class="redecor-rate-note">Daily averages account for the different reporting lengths.</p>
 
-            <details class="redecor-source-details">
-              <summary>View original analytics</summary>
+            <section class="redecor-source-details" aria-labelledby="redecor-source-title">
+              <h5 class="redecor-source-title" id="redecor-source-title">Original analytics screenshots</h5>
             <div class="redecor-proof-grid">
               <div class="redecor-proof-board" aria-label="Before joining: three platform screenshots">
                 <h6>Before · 3 months combined</h6>
@@ -2583,7 +2582,7 @@
             </div>
 
               <p class="redecor-method">Each screenshot shows its exact reporting dates. Daily averages use those dates inclusively; Instagram reach is shown as reported.</p>
-            </details>
+            </section>
 
             <div class="redecor-cumulative" aria-label="Separate cumulative results through October 2026">
               <span>Across two measured periods through Oct 2026</span>
